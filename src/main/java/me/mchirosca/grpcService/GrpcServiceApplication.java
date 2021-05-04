@@ -1,13 +1,13 @@
-package me.mchirosca.grpcSerivce;
+package me.mchirosca.grpcService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GrpcSerivceApplication {
+public class GrpcServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GrpcSerivceApplication.class, args);
+		SpringApplication.run(GrpcServiceApplication.class, args);
 	}
 
 }
