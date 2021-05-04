@@ -4,11 +4,11 @@ import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
 @GrpcService
-public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
+public class UserServiceImpl extends UserServiceGrpc.UserServiceImplBase {
 
     @Override
-    public void hello(
-            HelloRequest request, StreamObserver<HelloResponse> responseObserver) {
+    public void add(
+            UserRequest request, StreamObserver<UserResponse> responseObserver) {
 
 
         String responseString = new StringBuilder()
@@ -22,7 +22,7 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
                 .append(request.getAddress())
                 .toString();
 
-        HelloResponse response = HelloResponse.newBuilder()
+        UserResponse response = UserResponse.newBuilder()
                 .setSuccess(true)
                 .setMessage(responseString)
                 .build();
