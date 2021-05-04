@@ -11,18 +11,23 @@ public class HelloServiceImpl extends HelloServiceGrpc.HelloServiceImplBase {
             HelloRequest request, StreamObserver<HelloResponse> responseObserver) {
 
 
-        String greeting = new StringBuilder()
+        String responseString = new StringBuilder()
                 .append("Hello, ")
                 .append(request.getFirstName())
                 .append(" ")
                 .append(request.getLastName())
+                .append(" ")
+                .append(request.getEmail())
+                .append(" ")
+                .append(request.getAddress())
                 .toString();
 
         HelloResponse response = HelloResponse.newBuilder()
-                .setGreeting(greeting)
+                .setSuccess(true)
+                .setMessage(responseString)
                 .build();
 
-        System.out.println("HERE ****************** " + greeting);
+        System.out.println("HERE ****************** " + responseString);
         responseObserver.onNext(response);
         responseObserver.onCompleted();
     }

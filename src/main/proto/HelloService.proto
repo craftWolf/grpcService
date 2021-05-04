@@ -5,10 +5,13 @@ package me.mchirosca.grpcService;
 message HelloRequest {
   string firstName = 1;
   string lastName = 2;
+  string email = 3;
+  string address = 4;
 }
 
 message HelloResponse {
-  string greeting = 1;
+  bool success = 1;
+  string message = 2;
 }
 
 service HelloService {

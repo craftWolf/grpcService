@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grpcurl -plaintext -d '{"firstName":"testFirst","lastName":"testLast"}' localhost:9090 me.mchirosca.grpcService.HelloService/hello
+grpcurl -plaintext -d '{"firstName":"testFirst","lastName":"testLast","email":"mail@mail.com","address":"testAdress"}' localhost:9090 me.mchirosca.grpcService.HelloService/hello
